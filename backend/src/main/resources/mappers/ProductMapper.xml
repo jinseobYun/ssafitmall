@@ -1,0 +1,106 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafitmall.model.dao.ProductDao">
+    <!-- 전체 상품 조회 및 검색기능 -->
+    <select id="selectAllProducts" parameterType="ProductSearchCondition" resultType="Product">
+        SELECT * FROM product p
+        <!--        // category를 같이 받은 경우-->
+        WHERE is_sold = '판매중' AND product_name LIKE CONCAT('%',#{keyword},'%')
+        <if test="productCategory != 'ALL'">
+            AND category_code = #{productCategory}
+        </if>
+        <if test="inspection != 'ALL'">
+            AND inspection = #{inspection}
+        </if>
+        <!--        정렬 기준을 같이 받은 경우-->
+        <choose>
+            <!--베스트 순 -->
+            <when test="searchType == 'like'">
+                ORDER BY like_cnt DESC
+            </when>
+            <!--최신순-->
+            <when test="searchType == 'latest'">
+                ORDER BY product_date DESC
+            </when>
+            <!--            낮은 가격순-->
+            <when test="searchType == 'lowerPrice'">
+                ORDER BY product_price ASC
+            </when>
+            <when test="searchType == 'highPrice'">
+                ORDER BY product_price DESC
+            </when>
+        </choose>
+        <if test="limit != 0">
+            limit #{limit}
+        </if>
+    </select>
+
+    <!--    상품 하나 조회-->
+    <select id="selectOneProduct" parameterType="int" resultType="Product">
+        SELECT * FROM product WHERE product_code = #{productCode}
+    </select>
+
+    <!--    상품 등록-->
+    <insert id="createProduct" parameterType="Product">
+
+        <!--        상품 등록후 그 객체에 id값이 들어있도록 하기위한 쿼리-->
+        <selectKey resultType="int" keyProperty="productCode" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        INSERT INTO Product ( product_name,product_thumbnail ,product_price, product_desc, category_code,user_id )
+        VALUES
+        (#{productName},#{productThumbnail},#{productPrice},#{productDesc},#{categoryCode}, #{userId});
+    </insert>
+
+    <!--    상품 수정-->
+    <update id="updateProduct" parameterType="Product">
+        UPDATE product SET product_name = #{productName},product_price = #{productPrice}, product_desc =
+        #{productDesc},category_code = #{categoryCode} WHERE product_code = #{productCode}
+    </update>
+
+    <!--    상품 삭제-->
+    <delete id="deleteProduct" parameterType="int">
+        DELETE FROM product WHERE product_code = #{productCode}
+    </delete>
+    <!--    조회수 증가-->
+    <update id="updateProductHist" parameterType="int">
+        update product set product_hist = product_hist + 1 WHERE product_code = #{productCode}
+    </update>
+    <!-- 상품 이미지 생성-->
+    <insert id="createImgPath" parameterType="ProductImg">
+        INSERT INTO ImgPath (original_name,save_name,product_code) VALUES (#{originalName},#{saveName},#{productCode})
+    </insert>
+
+    <!--    상품 썸네일 수정-->
+    <update id="updateThumbnail" parameterType="hashmap">
+        UPDATE product set product_thumbnail = #{productThumbnail} WHERE product_code = #{productCode}
+    </update>
+
+    <!--    상품 이미지 조회-->
+    <select id="selectProductImg" parameterType="int" resultType="ProductImg">
+        SELECT * FROM ImgPath WHERE product_code = #{productCode}
+    </select>
+    <!-- 상품 이미지 경로 삭제-->
+    <delete id="deleteProductImg" parameterType="int">
+        DELETE FROM ImgPath WHERE product_code = #{productCode}
+    </delete>
+
+    <select id="selectUserProducts" parameterType="String" resultType="Product">
+        SELECT * FROM product WHERE user_id = #{userId}
+    </select>
+
+    <update id="updateSold" parameterType="hashmap">
+        UPDATE product SET is_sold = #{status} WHERE product_code = #{productCode}
+    </update>
+
+    <select id="selsectBestProductList" parameterType="int">
+        SELECT * FROM product order by like_cnt DESC limit #{limit};
+    </select>
+
+    <select id="selectLatestProductList" parameterType="int">
+        SELECT * FROM product order by product_date DESC limit #{limit};
+    </select>
+
+</mapper>

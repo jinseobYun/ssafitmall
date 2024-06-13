@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'MonumentExtended';
+  src: url('/assets/fonts/MonumentExtended-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'MonumentExtended', sans-serif;
+}
+
+.navbar, .nav-link, .btn {
+  font-family: 'MonumentExtended', sans-serif;
+}
+
+/* 기존 스타일 유지 */
+.header {
+  background-color: black;
+  padding: 15px 0;
+}
+
+.container-fluid .navbar-brand {
+  color: #007bff;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.routeLink {
+  color: rgb(2, 249, 2);
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.carousel-inner {
+  height: 600px;
+  text-align: center;
+}
+
+.carousel-img {
+  width: auto;
+  height: 600px;
+  margin: auto;
+}
+
+.inputbox {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.input-group {
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-group-prepend button {
+  width: 80px;
+  border: 2px solid black; /* 테두리 선 두껍게 */
+}
+
+.form-control {
+  width: calc(100% - 82px); /* 버튼과의 간격 조정 */
+  border: 2px solid black; /* 테두리 선 두껍게 */
+  border-radius: 5px; /* 테두리 둥글게 만듦 */
+  font-size: 1.2em; /* 폰트 크기 조정 */
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.group-button {
+  display: flex;
+  justify-content: center;
+}
+
+.video-category1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.video-category2 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.best-card {
+  margin: 20px 0;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 20px;
+}
+
+.video-item {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-primary,
+.btn-dark {
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-primary,
+.btn-dark {
+  color: #fff;
+}
+
+.input-group-prepend button {
+  border-color: white;
+  color: white;
+}
+
+@font-face {
+  font-family: 'EliceDXNeolli';
+  src: url('/src/assets/fonts/EliceDXNeolli-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Galmuri11';
+  src: url('@/assets/fonts/Galmuri11.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Campton';
+  src: url('/src/assets/fonts/CamptonBold.otf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nanum';
+  src: url('/src/assets/fonts/NanumSquareL.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Scdream';
+  src: url('/src/assets/fonts/SCDream3.otf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto';
+  src: url('../fonts/NotoSansKR-Light.otf') format('truetype');
+  font-weight: 400;
+}

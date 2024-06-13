@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafitmall.model.dao.SellerDao">
+	<!-- 전체 상품 조회 -->
+	<select id="selectSellerProducts" resultType="Product">
+		SELECT *
+		FROM PRODUCT
+	</select>
+
+	<!-- 상품 하나 조회 -->
+	<select id="selectSellerProductByCode" parameterType="Integer"
+		resultType="Product">
+		SELECT *
+		FROM PRODUCT
+		WHERE product_code = #{productCode}
+	</select>
+
+	<!-- 상품 등록 -->
+	<insert id="createSellerProduct" parameterType="Product">
+		<!-- 상품 등록후 그 객체에 id값이 들어있도록 하기위한 쿼리 -->
+        <selectKey resultType="int" keyProperty="productCode" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        
+		INSERT INTO Product ( product_name,product_thumbnail ,product_price, product_desc, category_code,user_id )
+        VALUES (#{productName},#{productThumbnail},#{productPrice},#{productDesc},#{categoryCode}, #{userId});
+	</insert>
+
+	<!-- 상품 수정 -->
+	<update id="updateSellerProduct" parameterType="Product">
+		UPDATE product SET product_name = #{productName},product_price = #{productPrice}, product_desc =
+        #{productDesc},category_code = #{categoryCode} 
+        WHERE product_code = #{productCode}
+	</update>
+
+	<!-- 상품 삭제 -->
+	<delete id="deleteSellerProduct" parameterType="Integer">
+		DELETE FROM PRODUCT
+		WHERE product_code = #{productCode}
+	</delete>
+	
+	<!-- 상품 이미지 생성-->
+    <insert id="createSellerImgPath" parameterType="ProductImg">
+        INSERT INTO ImgPath (original_name, save_name, product_code) VALUES (#{originalName},#{saveName},#{productCode})
+    </insert>
+
+	<!-- 상품 썸네일 수정 -->
+    <update id="updateSellerThumbnail" parameterType="hashmap">
+        UPDATE product set product_thumbnail = #{productThumbnail} WHERE product_code = #{productCode}
+    </update>
+    
+	<!-- 상품 이미지 경로 삭제 -->
+    <delete id="deleteSellerProductImg" parameterType="int" >
+        DELETE FROM ImgPath WHERE product_code = #{productCode}
+    </delete>
+	
+	
+	
+	
+</mapper>

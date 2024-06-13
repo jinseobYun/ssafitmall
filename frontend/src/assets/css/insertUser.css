@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+
+}
+
+.nav-link {
+
+    color: rgb(2, 249, 2);
+}
+
+
+
+#container {
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#reviewBox {
+    width: 700px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#inputBox {
+    margin-top: 50px;
+}
+
+.input-form-box {
+    display: flex;
+}
+
+img {
+    height: 100%;
+    padding-top: 3%;
+}
+
+.form-control {
+    margin-left: 20px;
+    border: none;
+    border-bottom: solid 1px rgb(180, 177, 177);
+    border-radius: 0px;
+    padding: 10px 8px;
+    font-size: 14px;
+}
+
+.btn {
+    border: none;
+    background-color: #74c0f3;
+}
+
+#cancelBtn{
+    background-color: #74c0f3;
+}
+
+.btn-outline-primary{
+    color:white;
+}
+
+.input-form-box {
+    margin: 30px;
+}

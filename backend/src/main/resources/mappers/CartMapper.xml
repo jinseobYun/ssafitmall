@@ -1,0 +1,38 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.ssafitmall.model.dao.CartDao">
+
+    <select id="selectCart" parameterType="String"  resultType="Cart">
+        SELECT * FROM cart WHERE user_id = #{userId};
+    </select>
+
+    <insert id="createCart" parameterType="Cart">
+        INSERT INTO cart (user_id, product_code) VALUES( #{userId},#{productCode} )
+    </insert>
+
+    <delete id="deleteCart" parameterType="int">
+        DELETE FROM cart WHERE cart_id = #{cartId}
+    </delete>
+
+    <delete id="deleteCartKeyUserId" parameterType="hashmap">
+        DELETE FROM cart WHERE user_id = #{userId} AND product_code = #{productCode}
+    </delete>
+
+    <update id="increaseLikeCnt" parameterType="int">
+        UPDATE product SET like_cnt = like_cnt + 1 WHERE product_code = #{productCode}
+    </update>
+
+
+    <update id="decreaseLikeCnt" parameterType="int">
+        UPDATE product SET like_cnt = like_cnt - 1 WHERE product_code = #{productCode}
+    </update>
+
+    <select id="selectCartInfo" parameterType="hashmap" resultType="CartInfo">
+        SELECT c.cart_id, c.user_id,c.product_code,p.product_thumbnail,p.product_name,p.product_price
+        FROM cart c JOIN product p ON c.product_code = p.product_code
+        WHERE c.user_id = #{userId} AND c.product_code = #{productCode}
+
+    </select>
+
+</mapper>
