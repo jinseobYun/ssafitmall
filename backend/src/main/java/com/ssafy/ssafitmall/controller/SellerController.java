@@ -159,11 +159,8 @@ public class SellerController {
 	@DeleteMapping("img/{productCode}")
 	public ResponseEntity<String> deleteImg(@PathVariable("productCode") int productCode) {
 		int result = sellerService.removeSellerProductImg(productCode);
-		
-		List<Product> productList = sellerService.findSellerProducts();
-		System.out.println(productList);
-		if (result == 0)
-			return new ResponseEntity<String>(FAIL_DELETE_IMG, HttpStatus.BAD_REQUEST);
+
+
 		return new ResponseEntity<String>(SUCCESS, HttpStatus.OK);
 	}
 

@@ -30,7 +30,7 @@
     <div v-if="showModal" class="modal">
       <div class="modal-content">
         <span class="close" @click="closeModal">&times;</span>
-        <component :is="modalComponent" :product-code="selectedProductCode" @close="closeModal"></component>
+        <component :is="modalComponent" :product-code="selectedProductCode" @close="closeModal" @update="updateProduct"></component>
       </div>
     </div>
   </div>
@@ -45,13 +45,24 @@ import ProductUpdate from './SellerProductUpdate.vue';
 import ProductRegister from './SellerProductCreate.vue';
 import Confirm from "@/components/common/Confirm.vue";
 
-const router = useRouter();
 const store = useSellerStore();
 const userStore = useUserStore();
 const products = ref([]);
 const showModal = ref(false);
 const modalComponent = ref(null);
 const selectedProductCode = ref(null);
+
+
+
+const updateProduct = async ({product,thumbnail,imgs}) => {
+
+  console.log(product)
+  await store.editProduct(product.value.productCode,product.value,thumbnail.value,imgs.value).then( async ()=>{
+    closeModal()
+    const newData = await store.getAllProducts();
+    products.value = newData;
+  })
+}
 
 // 상품 삭제 컨펌 모달 보여줄지 정하는 변수
 const isDialogVisible = ref(false);
@@ -93,16 +104,6 @@ onMounted(async () => {
   }
 });
 
-const deleteProduct = async (productCode) => {
-  try {
-    await store.deleteProduct(productCode);
-    const data = await store.getAllProducts();
-    products.value = data;
-  } catch (error) {
-    console.error("상품 삭제 중 오류 발생:", error);
-  }
-};
-
 const openModal = (type, productCode = null) => {
   if (type === 'register') {
     modalComponent.value = ProductRegister;
@@ -117,7 +118,6 @@ const closeModal = () => {
   showModal.value = false;
   modalComponent.value = null;
   selectedProductCode.value = null;
-  router.go(0)
 };
 </script>
 

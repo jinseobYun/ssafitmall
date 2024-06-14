@@ -1,5 +1,5 @@
 <template>
-  <div class="product-update-container">
+  <div v-if="product" class="product-update-container">
     <h2>상품을 수정해주세요.</h2>
     <div class="mb-3">
       <label for="thumbnail" class="form-label">상품 썸네일</label>
@@ -90,41 +90,41 @@ const router = useRouter();
 const userStore = useUserStore();
 const sellerStore = useSellerStore();
 
-const productCode = route.params.productCode;
 
-const product = ref({
-  productName: "",
-  productPrice: 0,
-  productDesc: "",
-  userId: userStore.loginUser.userId,
-  categoryCode: "",
+const props = defineProps({
+  productCode : Number
 });
+
+const emits = defineEmits(['update'])
+
+const product = ref();
 
 const imgs = ref([]);
 const thumbnail = ref(null);
-
-// 상품 정보 가져오기
-const getProduct = () => {
-  store.getAllUser();
-};
 
 
 const thumbnailUpload = (e) => {
   thumbnail.value = e.target.files[0];
 };
+
 const imgUpload = (e) => {
   const selectedFiles = Array.from(e.target.files);
   imgs.value.push(...selectedFiles);
 };
 
+const updateProduct = () => {
+  console.log()
+  emits('update',{product,thumbnail,imgs})
+}
+
 const deleteImg = (idx) => {
   imgs.value.splice(idx, 1);
 };
 
-const inputProduct = () => {
-  store.createProduct(product.value, thumbnail.value, imgs.value);
-  router.push({name: `sellerpage`})
-};
+
+onMounted(async ()=>{
+  product.value = await sellerStore.getProduct(props.productCode);
+})
 </script>
 
 <style scoped>

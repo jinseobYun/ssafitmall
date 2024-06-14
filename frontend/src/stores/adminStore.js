@@ -66,7 +66,6 @@ export const useAdminStore = defineStore("admin", () => {
             .then((res) => {
 
                 productList.value = res.data;
-                console.log(productList.value);
             }).catch((err)=>{
                 console.log("getProductList 에러");
                 console.log(err);
