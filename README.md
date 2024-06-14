@@ -76,7 +76,7 @@
 
 ### 메인 페이지
 
-![main](main.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/81d71dcc-2b0b-4115-b9d1-552d292d914c" width="500" height="400"/></center>
 
 - 상품 카테고리 nav 바
 - 프로모션 배너 슬라이더 윈도우
@@ -84,15 +84,15 @@
 
 ### 회원가입 및 로그인
 
-![login](signup_login.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/63b8fc34-043d-478f-bea7-dffcaf693198" width="500" height="400"/></center>
 
 ### 카테고리 별 상품 목록 조회
 
-![카테고리별 상품](category.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/852867f5-ab89-4fa6-bb98-2d53f15bd866" width="500" height="400"/></center>
 
 ### 상품 주문 및 결제
 
-![payment](PAYMENT_ORDER.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/ce9f17d2-1f70-4f6a-80f8-5412ad029a44" width="500" height="400"/></center>
 
 - 상품 주문 및 주문 상세 페이지
 - 카카오페이 결제 API 활용
@@ -100,13 +100,13 @@
 
 ### 결제 취소 및 주문 취소
 
-![canclepayment](depayment_deorder.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/f4ece0b7-924e-483b-8bba-adedc4fe18b2" width="500" height="400"/></center>
 
 - 카카오페이 결제 취소 API 활용
 
 ### 마이페이지
 
-![mypage](mypage.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e1727acc-a7a6-4fb3-81eb-fb0574d1bc36" width="500" height="400"/></center>
 
 - 주문 상세 정보
 - 등록 상품 상세 정보
@@ -115,11 +115,11 @@
 
 ### 관심 상품
 
-![like](likebtn.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/d4c81fad-b6b3-4192-a3d6-4eddc1317f41" width="500" height="400"/></center>
 
 ### 챗봇
 
-![chatbot](chatbot.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/da4c98fd-0747-42b5-8632-35e6cdce9a0a" width="500" height="400"/></center>
 
 - Chat GPT API를 활용한 챗봇기능
 - 상품 이름을 추출해 부작용,효능 등 상품 정보 질의 프롬프트 또는 가격 비교 질의 프롬프트를 선택해 Chat GPT API를 사용해 질문 후 응답한 답변을 화면에 출력
@@ -129,24 +129,24 @@
 
 #### 상품 관리
 
-![admin_product](admin_product.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e290c1ef-4828-4b1c-ab7b-c077621af7c8" width="500" height="400"/></center>
 
 #### 유저 관리
 
-![user](admin_user.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/df1ef21e-97ca-46d4-8826-71386d3b680f" width="500" height="400"/></center>
 
 ### 판매자 페이지
 
 #### 상품 등록
 
-![addproduct](product_add.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e083e80b-711a-4d86-a644-c031e3b5b98b" width="500" height="400"/></center>
 
 #### 상품 수정 및 삭제
 
-![updateProduct](productUpdate.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/07680ddb-1592-4426-b365-8acc0938dc05" width="500" height="400"/></center>
 
 ### 상품 검색
 
-![search](search.gif)
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/b89ea457-9621-461a-8ce6-69ce7a4af95b" width="500" height="400"/></center>
 
 ---
