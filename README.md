@@ -69,3 +69,84 @@
 - Github, Figma, Notion
 
 ---
+
+## 주요 기능
+
+---
+
+### 메인 페이지
+
+![main](main.gif)
+
+- 상품 카테고리 nav 바
+- 프로모션 배너 슬라이더 윈도우
+- 관심 등록 수 많은 상품과 최근 등록 상품 노출
+
+### 회원가입 및 로그인
+
+![login](signup_login.gif)
+
+### 카테고리 별 상품 목록 조회
+
+![카테고리별 상품](category.gif)
+
+### 상품 주문 및 결제
+
+![payment](PAYMENT_ORDER.gif)
+
+- 상품 주문 및 주문 상세 페이지
+- 카카오페이 결제 API 활용
+- 다음 주소 API 활용
+
+### 결제 취소 및 주문 취소
+
+![canclepayment](depayment_deorder.gif)
+
+- 카카오페이 결제 취소 API 활용
+
+### 마이페이지
+
+![mypage](mypage.gif)
+
+- 주문 상세 정보
+- 등록 상품 상세 정보
+- 회원 정보 수정
+- 판매자 정보 등록
+
+### 관심 상품
+
+![like](likebtn.gif)
+
+### 챗봇
+
+![chatbot](chatbot.gif)
+
+- Chat GPT API를 활용한 챗봇기능
+- 상품 이름을 추출해 부작용,효능 등 상품 정보 질의 프롬프트 또는 가격 비교 질의 프롬프트를 선택해 Chat GPT API를 사용해 질문 후 응답한 답변을 화면에 출력
+- 🚨 현재 API KEY 만료로 사용 불가
+
+### 관리자 페이지
+
+#### 상품 관리
+
+![admin_product](admin_product.gif)
+
+#### 유저 관리
+
+![user](admin_user.gif)
+
+### 판매자 페이지
+
+#### 상품 등록
+
+![addproduct](product_add.gif)
+
+#### 상품 수정 및 삭제
+
+![updateProduct](productUpdate.gif)
+
+### 상품 검색
+
+![search](search.gif)
+
+---
