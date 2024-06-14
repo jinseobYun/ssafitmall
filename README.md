@@ -6,7 +6,7 @@
 
 </details>
 
-<center><img src="localhost_5173_.png" width="500" height="400"/></center>
+<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/b74ebbab-7e07-4738-9604-9095201298c5" width="500" height="400"/></center>
 
 ---
 
