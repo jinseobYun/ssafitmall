@@ -84,83 +84,34 @@ SSAFY ( 삼성 청년 소프트웨어 아카데미 ) 에 들어와서 Spring Boo
 
 ## 주요 기능
 
-### 메인 페이지
+| **메인 페이지**                                              | **회원가입 및 로그인**                                       | **카테고리 별 상품 목록 조회**                               |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![메인 페이지](https://github.com/jinseobYun/ssafitmall/assets/103829767/81d71dcc-2b0b-4115-b9d1-552d292d914c) | ![회원가입 및 로그인](https://github.com/jinseobYun/ssafitmall/assets/103829767/63b8fc34-043d-478f-bea7-dffcaf693198) | ![카테고리 별 상품 목록 조회](https://github.com/jinseobYun/ssafitmall/assets/103829767/852867f5-ab89-4fa6-bb98-2d53f15bd866) |
 
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/81d71dcc-2b0b-4115-b9d1-552d292d914c" width="500" height="400"/></center>
+| **상품 주문 및 결제**                                        | **결제 취소 및 주문 취소**                                   | **마이페이지**                                              |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![상품 주문 및 결제](https://github.com/jinseobYun/ssafitmall/assets/103829767/ce9f17d2-1f70-4f6a-80f8-5412ad029a44) | ![결제 취소 및 주문 취소](https://github.com/jinseobYun/ssafitmall/assets/103829767/f4ece0b7-924e-483b-8bba-adedc4fe18b2) | ![마이페이지](https://github.com/jinseobYun/ssafitmall/assets/103829767/e1727acc-a7a6-4fb3-81eb-fb0574d1bc36) |
 
-- 상품 카테고리 nav 바
-- 프로모션 배너 슬라이더 윈도우
-- 관심 등록 수 많은 상품과 최근 등록 상품 노출
+| **관심 상품**                                                | **챗봇**                                                     | **상품 관리**                                               |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![관심 상품](https://github.com/jinseobYun/ssafitmall/assets/103829767/d4c81fad-b6b3-4192-a3d6-4eddc1317f41) | ![챗봇](https://github.com/jinseobYun/ssafitmall/assets/103829767/da4c98fd-0747-42b5-8632-35e6cdce9a0a) | ![상품 관리](https://github.com/jinseobYun/ssafitmall/assets/103829767/e290c1ef-4828-4b1c-ab7b-c077621af7c8) |
 
-### 회원가입 및 로그인
+| **유저 관리**                                                | **상품 등록**                                               | **상품 수정 및 삭제**                                       |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![유저 관리](https://github.com/jinseobYun/ssafitmall/assets/103829767/df1ef21e-97ca-46d4-8826-71386d3b680f) | ![상품 등록](https://github.com/jinseobYun/ssafitmall/assets/103829767/e083e80b-711a-4d86-a644-c031e3b5b98b) | ![상품 수정 및 삭제](https://github.com/jinseobYun/ssafitmall/assets/103829767/07680ddb-1592-4426-b365-8acc0938dc05) |
 
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/63b8fc34-043d-478f-bea7-dffcaf693198" width="500" height="400"/></center>
-
-### 카테고리 별 상품 목록 조회
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/852867f5-ab89-4fa6-bb98-2d53f15bd866" width="500" height="400"/></center>
-
-### 상품 주문 및 결제
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/ce9f17d2-1f70-4f6a-80f8-5412ad029a44" width="500" height="400"/></center>
-
-- 상품 주문 및 주문 상세 페이지
-- 카카오페이 결제 API 활용
-- 다음 주소 API 활용
-
-### 결제 취소 및 주문 취소
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/f4ece0b7-924e-483b-8bba-adedc4fe18b2" width="500" height="400"/></center>
-
-- 카카오페이 결제 취소 API 활용
-
-### 마이페이지
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e1727acc-a7a6-4fb3-81eb-fb0574d1bc36" width="500" height="400"/></center>
-
-- 주문 상세 정보
-- 등록 상품 상세 정보
-- 회원 정보 수정
-- 판매자 정보 등록
-
-### 관심 상품
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/d4c81fad-b6b3-4192-a3d6-4eddc1317f41" width="500" height="400"/></center>
-
-### 챗봇
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/da4c98fd-0747-42b5-8632-35e6cdce9a0a" width="500" height="400"/></center>
-
-- Chat GPT API를 활용한 챗봇기능
-- 상품 이름을 추출해 부작용,효능 등 상품 정보 질의 프롬프트 또는 가격 비교 질의 프롬프트를 선택해 Chat GPT API를 사용해 질문 후 응답한 답변을 화면에 출력
-- 🚨 현재 API KEY 만료로 사용 불가
-
-### 관리자 페이지
-
-#### 상품 관리
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e290c1ef-4828-4b1c-ab7b-c077621af7c8" width="500" height="400"/></center>
-
-#### 유저 관리
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/df1ef21e-97ca-46d4-8826-71386d3b680f" width="500" height="400"/></center>
-
-### 판매자 페이지
-
-#### 상품 등록
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/e083e80b-711a-4d86-a644-c031e3b5b98b" width="500" height="400"/></center>
-
-#### 상품 수정 및 삭제
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/07680ddb-1592-4426-b365-8acc0938dc05" width="500" height="400"/></center>
-
-### 상품 검색
-
-<center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/b89ea457-9621-461a-8ce6-69ce7a4af95b" width="500" height="400"/></center>
-
+| **상품 검색**                                                |                                                              |                                                              |
+|:------------------------------------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+| ![상품 검색](https://github.com/jinseobYun/ssafitmall/assets/103829767/b89ea457-9621-461a-8ce6-69ce7a4af95b) |                                                              |                                                              |
 ### 산출물
 
 #### API 명세서
 ![image](https://github.com/user-attachments/assets/010a825a-09da-424c-a10c-c0e13d0a4652)
+
+#### ERD
+
+![SsafitMall_ERDiagram](https://github.com/user-attachments/assets/d297ac55-fb56-4997-9bed-958a42420247)
+
+
+
 
