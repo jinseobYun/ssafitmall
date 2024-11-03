@@ -158,3 +158,9 @@ SSAFY ( 삼성 청년 소프트웨어 아카데미 ) 에 들어와서 Spring Boo
 ### 상품 검색
 
 <center><img src="https://github.com/jinseobYun/ssafitmall/assets/103829767/b89ea457-9621-461a-8ce6-69ce7a4af95b" width="500" height="400"/></center>
+
+### 산출물
+
+#### API 명세서
+![image](https://github.com/user-attachments/assets/010a825a-09da-424c-a10c-c0e13d0a4652)
+
